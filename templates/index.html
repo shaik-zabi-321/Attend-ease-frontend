@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AttendEase — AI Powered Attendance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="AttendEase Logo">
+            <div class="logo-text">AttendEase</div>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#">Home</a>
+            <a href="#features">Features</a>
+            <a href="#journey">Journey</a>
+            <a href="#tech">Tech Stack</a>
+        </div>
+
+        <div class="nav-cta">
+            <a href="https://shaik-zabi-321-snap-class-app-mvgk3n.streamlit.app/" class="btn-pill">
+                <span class="btn-label-full">Start AI Attendance</span>
+                <span class="btn-label-short" aria-hidden="true">Start</span>
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"></path>
+                </svg>
+            </a>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">Attendance, without the hassle</div>
+        <h1>AI-powered <br> attendance<span>, made easy</span></h1>
+        <p>Face and voice recognition take attendance in seconds — no roll call, no paper, no fuss.</p>
+        <div class="hero-actions">
+            <a href="https://shaik-zabi-321-snap-class-app-mvgk3n.streamlit.app/" class="btn-pill">
+                Take Attendance
+            </a>
+            <a href="#journey" class="Link-action">Explore the teacher's journey</a>
+        </div>
+        <div class="floating-card card-left">
+            <div class="card-img">
+                <img src="{{ url_for('static', filename='img/demo/main dashboard.png') }}" alt="Main dashboard preview">
+            </div>
+        </div>
+        <div class="floating-card card-right">
+            <div class="card-img">
+                <img src="{{ url_for('static', filename='img/demo/student dashboard.png') }}"
+                    alt="Student dashboard preview">
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <h2>Innovative Features</h2>
+        <p>Three ways AttendEase takes roll call off your plate.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📸</div>
+                <h3>Face Analysis</h3>
+                <p>Accurately identify and track student attendance through advanced face recognition technology.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎤</div>
+                <h3>Sequential Voice ID</h3>
+                <p>Accurately identify and track student attendance through advanced voice recognition technology.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>QR Driven Roster</h3>
+                <p>Streamline your class roster management with our QR code-based system.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="tech-stack">
+        <h2>Tech Stack</h2>
+        <p>The tools running quietly behind every scan.</p>
+        <div class="tech-stack-grid">
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="tech-icon">🤖</div>
+                    <h4>Streamlit & Flask</h4>
+                    <p>Reactive frontend with Flask backend.</p>
+                    <span class="tech-tag">Web Development</span>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="tech-icon">🧑🏻</div>
+                    <h4>Face Recognition</h4>
+                    <p>Face recognition with Dlib for high-fidelity facial biometrics.</p>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="tech-icon">🎤</div>
+                    <h4>Voice Embeddings</h4>
+                    <p>Voice recognition with advanced embedding techniques.</p>
+                    <span class="tech-tag">Voice</span>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-card">
+                    <div class="tech-icon">☁️</div>
+                    <h4>Supabase Cloud</h4>
+                    <p>Supabase cloud for seamless data management.</p>
+                    <span class="tech-tag">Cloud</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="teacher-flow">
+        <div class="section-tag">Work flow</div>
+        <h2>The Teacher's Journey</h2>
+        <div class="flow-line" aria-hidden="true"></div>
+
+        <div class="flow-step">
+            <div class="flow-content">
+                <div class="step-badge">01</div>
+                <h3>Secure Login</h3>
+                <p>Start your session with a simple username and password portal.</p>
+            </div>
+            <div class="flow-image">
+                <img src="{{ url_for('static', filename='img/demo/teacher login.png') }}" alt="Teacher login screen">
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-content">
+                <div class="step-badge">02</div>
+                <h3>Teacher Dashboard</h3>
+                <p>Jump straight to taking attendance, managing subjects, or reviewing records.</p>
+            </div>
+            <div class="flow-image">
+                <img src="{{ url_for('static', filename='img/demo/teacher dashboard.png') }}"
+                    alt="Teacher dashboard overview">
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-content">
+                <div class="step-badge">03</div>
+                <h3>Manage Subjects</h3>
+                <p>Create a subject, share its code with your class, and see who's enrolled at a glance.</p>
+            </div>
+            <div class="flow-image">
+                <img src="{{ url_for('static', filename='img/demo/mamage subjects.png') }}"
+                    alt="Manage subjects screen">
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-content">
+                <div class="step-badge">04</div>
+                <h3>Attendance Records</h3>
+                <p>Review every session's attendance stats, timestamped and organized by subject.</p>
+            </div>
+            <div class="flow-image">
+                <img src="{{ url_for('static', filename='img/demo/attendance records.png') }}"
+                    alt="Attendance records screen">
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="AttendEase Logo">
+                    <div class="logo-text">AttendEase</div>
+                </div>
+                <p>Face + voice attendance, built for your classroom.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#">AI Attendance</a></li>
+                    <li><a href="#">Smart Roster</a></li>
+                    <li><a href="#tech">Tech Stack</a></li>
+                    <li><a href="#">Student Dashboard</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Experience</h4>
+                <ul>
+                    <li><a href="#journey">Teachers Journey</a></li>
+                    <li><a href="#students-journey">Students Journey</a></li>
+                    <li><a href="#">Voice ID Recognition</a></li>
+                    <li><a href="#">Face Recognition</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#features">How it Works</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Made by Your Name Here · Your College Name Here</p>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            navToggle.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+    </script>
+</body>
+
+</html>
